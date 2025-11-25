@@ -196,20 +196,90 @@
   align-items: center;
 }
 
+/* Popravi pulse efekte */
 .pulse-effect {
   position: absolute;
-  width: 50px;
-  height: 50px;
-  background: rgba(16, 185, 129, 0.3);
+  width: 80px;
+  height: 80px;
+  background: rgba(16, 185, 129, 0.4);
   border-radius: 50%;
   animation: radarPulse 2s infinite;
+  border: 2px solid rgba(16, 185, 129, 0.6);
 }
 
 .marker-center {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   z-index: 2;
+  filter: drop-shadow(0 0 10px rgba(16, 185, 129, 0.8));
 }
 
+/* Poboljšaj map view da se bolje vide animacije */
+.map-view {
+  flex: 1;
+  background: linear-gradient(45deg, #1e293b 0%, #2d3748 100%);
+  border-radius: 12px;
+  margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: visible; /* Promenjeno iz hidden u visible */
+}
+
+/* Poboljšaj animacije */
+@keyframes radarPulse {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0% { 
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+  100% { 
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Dodaj još jedan pulse efekat za bolji vizuelni efekat */
+.pulse-effect-2 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: rgba(59, 130, 246, 0.3);
+  border-radius: 50%;
+  animation: radarPulse2 2s infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes radarPulse2 {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
 .current-location {
   position: absolute;
   bottom: 0.8rem;
@@ -463,4 +533,149 @@
   .app-title {
     font-size: 0.9rem;
   }
+}
+/* Satelitska pozadina */
+.satellite-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    /* Zelena za parkove i prirodu */
+    radial-gradient(circle at 30% 70%, rgba(34, 139, 34, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 70% 30%, rgba(34, 139, 34, 0.2) 0%, transparent 50%),
+    /* Siva za urbane oblasti */
+    radial-gradient(circle at 50% 50%, rgba(128, 128, 128, 0.4) 0%, transparent 60%),
+    /* Plava za reku */
+    linear-gradient(90deg, transparent 40%, rgba(30, 144, 255, 0.3) 40%, rgba(30, 144, 255, 0.3) 60%, transparent 60%),
+    /* Osnovna satelitska tekstura */
+    linear-gradient(45deg, #2d5a27 0%, #3a7c3a 25%, #556b2f 50%, #6b8e23 75%, #808000 100%);
+  background-blend-mode: overlay;
+  border-radius: 12px;
+  animation: subtleMove 20s infinite linear;
+}
+/* Poboljšaj map view */
+.map-view {
+  flex: 1;
+  background: linear-gradient(135deg, #1e3a1e 0%, #2d5a2d 100%);
+  border-radius: 12px;
+  margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Putevi na mapi */
+.map-roads {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.road {
+  position: absolute;
+  background: rgba(139, 69, 19, 0.6);
+}
+
+.road.horizontal {
+  top: 45%;
+  left: 10%;
+  right: 10%;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(139, 69, 19, 0.8) 20%, 
+    rgba(160, 82, 45, 0.9) 50%, 
+    rgba(139, 69, 19, 0.8) 80%, 
+    transparent 100%);
+}
+
+.road.vertical {
+  left: 50%;
+  top: 20%;
+  bottom: 20%;
+  width: 3px;
+  background: linear-gradient(0deg, 
+    transparent 0%, 
+    rgba(139, 69, 19, 0.8) 20%, 
+    rgba(160, 82, 45, 0.9) 50%, 
+    rgba(139, 69, 19, 0.8) 80%, 
+    transparent 100%);
+}
+
+/* Poboljšaj lokaciju */
+.location-name {
+  font-size: 0.6rem;
+  color: #e2e8f0;
+  margin-top: 0.2rem;
+  font-weight: 500;
+}
+
+/* Poboljšaj pulse efekte za bolju vidljivost na zelenoj pozadini */
+.pulse-effect {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: rgba(220, 38, 38, 0.4); /* Crvena za bolji kontrast */
+  border-radius: 50%;
+  animation: radarPulse 2s infinite;
+  border: 2px solid rgba(220, 38, 38, 0.7);
+}
+
+.pulse-effect-2 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: rgba(59, 130, 246, 0.4); /* Plava */
+  border-radius: 50%;
+  animation: radarPulse2 2s infinite;
+  animation-delay: 0.5s;
+}
+
+.marker-center {
+  font-size: 2.5rem;
+  z-index: 2;
+  filter: 
+    drop-shadow(0 0 10px rgba(220, 38, 38, 0.8))
+    drop-shadow(0 0 20px rgba(220, 38, 38, 0.4))
+    brightness(1.3);
+}
+
+.current-location {
+  position: absolute;
+  bottom: 1rem;
+  text-align: center;
+  background: rgba(15, 23, 42, 0.85);
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.coord {
+  font-size: 0.65rem;
+  font-family: 'Courier New', monospace;
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+/* Dodaj blag pokret map-e za realističnost */
+@keyframes subtleMove {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 2% 2%; }
+  100% { background-position: 0% 0%; }
+}
+
+.satellite-background {
+  animation: subtleMove 20s infinite linear;
 }

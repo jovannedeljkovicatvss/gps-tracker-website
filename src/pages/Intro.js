@@ -88,15 +88,27 @@ const Intro = () => {
                   </div>
                   
                   <div className="map-view">
-                    <div className="location-marker">
-                      <div className="pulse-effect"></div>
-                      <div className="marker-center">📍</div>
-                    </div>
-                    <div className="current-location">
-                      <div className="coord">44.7866° N</div>
-                      <div className="coord">20.4489° E</div>
-                    </div>
-                  </div>
+  {/* Satelitska pozadina */}
+  <div className="satellite-background"></div>
+  
+  <div className="location-marker">
+    <div className="pulse-effect"></div>
+    <div className="pulse-effect-2"></div>
+    <div className="marker-center">📍</div>
+  </div>
+  
+  <div className="current-location">
+    <div className="coord">44.7866° N</div>
+    <div className="coord">20.4489° E</div>
+    <div className="location-name">Beograd, Srbija</div>
+  </div>
+
+  {/* Dodaj još neke elemente za realističnost */}
+  <div className="map-roads">
+    <div className="road horizontal"></div>
+    <div className="road vertical"></div>
+  </div>
+</div>
                   
                   <div className="app-footer">
                     <div className="gps-info">
