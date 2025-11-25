@@ -27,12 +27,12 @@ const Header = () => {
           >
             Istorijat
           </Link>
-          <Link to="/detalji" className="coming-soon">
+          <NavLink to="/detalji" className={({ isActive }) => isActive ? "active" : ""}>
             Detalji
-          </Link>
-          <Link to="/cene" className="coming-soon">
+          </NavLink>
+          <NavLink to="/cene" className={({ isActive }) => isActive ? "active" : ""}>
             Cene
-          </Link>
+            </NavLink>
           <NavLink to="/kontakt" className={({ isActive }) => isActive ? "active" : ""}>
   Kontakt
 </NavLink>
