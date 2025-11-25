@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   const location = useLocation();
@@ -32,9 +33,9 @@ const Header = () => {
           <Link to="/cene" className="coming-soon">
             Cene
           </Link>
-          <Link to="/kontakt" className="coming-soon">
-            Kontakt
-          </Link>
+          <NavLink to="/kontakt" className={({ isActive }) => isActive ? "active" : ""}>
+  Kontakt
+</NavLink>
         </nav>
       </div>
     </header>

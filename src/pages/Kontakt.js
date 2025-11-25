@@ -19,16 +19,39 @@ const Kontakt = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulacija slanja forme
-    setTimeout(() => {
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/jocaned@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.ime,
+          email: formData.email,
+          subject: formData.tema,
+          message: formData.poruka,
+          _captcha: 'false',
+          _template: 'table',
+          _subject: `Nova poruka sa sajta: ${formData.tema}`
+        })
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({ ime: '', email: '', tema: '', poruka: '' });
+      } else {
+        alert('Došlo je do greške pri slanju poruke. Pokušajte ponovo.');
+      }
+    } catch (error) {
+      alert('Došlo je do greške pri slanju poruke. Proverite internet konekciju i pokušajte ponovo.');
+    } finally {
       setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormData({ ime: '', email: '', tema: '', poruka: '' });
-    }, 2000);
+    }
   };
 
   return (
@@ -106,7 +129,7 @@ const Kontakt = () => {
                 <div className="success-message">
                   <div className="success-icon">✅</div>
                   <h3>Poruka je uspešno poslata!</h3>
-                  <p>Odgovorićemo vam u najkraćem mogućem roku.</p>
+                  <p>Odgovorićemo vam na email u najkraćem mogućem roku.</p>
                   <button 
                     onClick={() => setIsSubmitted(false)}
                     className="btn btn-secondary"
@@ -155,11 +178,11 @@ const Kontakt = () => {
                       disabled={isSubmitting}
                     >
                       <option value="">Izaberite temu</option>
-                      <option value="podrska">Podrška za aplikaciju</option>
-                      <option value="pitanje">Tehničko pitanje</option>
-                      <option value="predlog">Predlog za poboljšanje</option>
-                      <option value="saradnja">Saradnja</option>
-                      <option value="ostalo">Ostalo</option>
+                      <option value="Podrška za aplikaciju">Podrška za aplikaciju</option>
+                      <option value="Tehničko pitanje">Tehničko pitanje</option>
+                      <option value="Predlog za poboljšanje">Predlog za poboljšanje</option>
+                      <option value="Saradnja">Saradnja</option>
+                      <option value="Ostalo">Ostalo</option>
                     </select>
                   </div>
 

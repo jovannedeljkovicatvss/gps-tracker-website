@@ -4,6 +4,7 @@ import './App.css';
 import Header from './components/Header';
 import Intro from './pages/Intro';
 import Istorijat from './pages/Istorijat';
+import Kontakt from './pages/Kontakt'; // Dodajte ovu liniju
 
 function App() {
   return (
