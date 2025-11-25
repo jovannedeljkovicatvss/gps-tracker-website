@@ -13,3 +13,18 @@ body {
 .App {
   min-height: 100vh;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+/* Poboljšaj focus za accessibility */
+a:focus, button:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Poboljšaj selection */
+::selection {
+  background: rgba(37, 99, 235, 0.2);
+  color: inherit;
+}
