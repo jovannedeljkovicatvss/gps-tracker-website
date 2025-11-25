@@ -52,15 +52,10 @@ const Intro = () => {
         <button className="btn btn-primary">
           <span className="btn-icon">📱</span>
           Preuzmi Aplikaciju
-          <span className="btn-badge">Besplatno</span>
         </button>
         <button className="btn btn-secondary">
           <span className="btn-icon">🎬</span>
           Pogledaj Demo
-        </button>
-        <button className="btn btn-outline">
-          <span className="btn-icon">ℹ️</span>
-          Saznaj Više
         </button>
       </div>
 
@@ -131,7 +126,6 @@ const Intro = () => {
     </div>
   </div>
 </section>
-
       {/* Šta Nudi Sekcija */}
       <section id="uvod" className="features">
         <div className="container">
