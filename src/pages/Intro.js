@@ -20,112 +20,113 @@ const Intro = () => {
       </header>
 
       {/* Hero Sekcija */}
-<section className="hero">
-  <div className="container">
-    <div className="hero-content">
-      <h1>GPS Tracker PRO</h1>
-      <p className="hero-subtitle">
-        Profesionalno rešenje za praćenje lokacije, analizu ruta i upravljanje tačkama interesa. 
-        Savršen alat za svakodnevnu upotrebu i poslovne potrebe.
-      </p>
-      
-      <div className="hero-features">
-        <div className="feature-badge">
-          <span className="feature-icon">🎯</span>
-          <span>Tačnost do 5m</span>
-        </div>
-        <div className="feature-badge">
-          <span className="feature-icon">⚡</span>
-          <span>Real-time praćenje</span>
-        </div>
-        <div className="feature-badge">
-          <span className="feature-icon">📊</span>
-          <span>Detaljne statistike</span>
-        </div>
-        <div className="feature-badge">
-          <span className="feature-icon">🔒</span>
-          <span>Privatnost podataka</span>
-        </div>
-      </div>
-
-      <div className="hero-buttons">
-        <button className="btn btn-primary">
-          <span className="btn-icon">📱</span>
-          Preuzmi Aplikaciju
-        </button>
-        <button className="btn btn-secondary">
-          <span className="btn-icon">🎬</span>
-          Pogledaj Demo
-        </button>
-      </div>
-
-      <div className="hero-stats">
-        <div className="stat">
-          <div className="stat-number">4.8/5</div>
-          <div className="stat-label">Ocena korisnika</div>
-        </div>
-        <div className="stat">
-          <div className="stat-number">500+</div>
-          <div className="stat-label">Preuzimanja</div>
-        </div>
-        <div className="stat">
-          <div className="stat-number">99%</div>
-          <div className="stat-label">Pouzdanost</div>
-        </div>
-      </div>
-    </div>
-    
-    <div className="hero-image">
-      <div className="phone-mockup">
-        <div className="phone-screen">
-          <div className="app-interface">
-            <div className="app-header">
-              <div className="app-title">GPS Tracker PRO</div>
-              <div className="app-status">
-                <span className="status-dot"></span>
-                <span>Active</span>
+      <section className="hero">
+        <div className="container">
+          <div className="hero-content">
+            <h1>GPS Tracker PRO</h1>
+            <p className="hero-subtitle">
+              Profesionalno rešenje za praćenje lokacije, analizu ruta i upravljanje tačkama interesa. 
+              Savršen alat za svakodnevnu upotrebu i poslovne potrebe.
+            </p>
+            
+            <div className="hero-features">
+              <div className="feature-badge">
+                <span className="feature-icon">🎯</span>
+                <span>Tačnost do 5m</span>
+              </div>
+              <div className="feature-badge">
+                <span className="feature-icon">⚡</span>
+                <span>Real-time praćenje</span>
+              </div>
+              <div className="feature-badge">
+                <span className="feature-icon">📊</span>
+                <span>Detaljne statistike</span>
+              </div>
+              <div className="feature-badge">
+                <span className="feature-icon">🔒</span>
+                <span>Privatnost podataka</span>
               </div>
             </div>
-            
-            <div className="map-view">
-              <div className="location-marker">
-                <div className="pulse-effect"></div>
-                <div className="marker-center">📍</div>
+
+            <div className="hero-buttons">
+              <button className="btn btn-primary">
+                <span className="btn-icon">📱</span>
+                Preuzmi Aplikaciju
+              </button>
+              <button className="btn btn-secondary">
+                <span className="btn-icon">🎬</span>
+                Pogledaj Demo
+              </button>
+            </div>
+
+            <div className="hero-stats">
+              <div className="stat">
+                <div className="stat-number">4.8/5</div>
+                <div className="stat-label">Ocena korisnika</div>
               </div>
-              <div className="current-location">
-                <div className="coord">44.7866° N</div>
-                <div className="coord">20.4489° E</div>
+              <div className="stat">
+                <div className="stat-number">500+</div>
+                <div className="stat-label">Preuzimanja</div>
+              </div>
+              <div className="stat">
+                <div className="stat-number">99%</div>
+                <div className="stat-label">Pouzdanost</div>
               </div>
             </div>
-            
-            <div className="app-footer">
-              <div className="gps-info">
-                <div className="signal-strength">
-                  <span>📶</span>
-                  <span>Excellent</span>
-                </div>
-                <div className="battery-level">
-                  <span>🔋</span>
-                  <span>85%</span>
-                </div>
-              </div>
-              <div className="tracking-stats">
-                <div className="stat-item">
-                  <span>🛣️</span>
-                  <span>12.5 km</span>
-                </div>
-                <div className="stat-item">
-                  <span>⏱️</span>
-                  <span>45 min</span>
+          </div>
+          
+          <div className="hero-image">
+            <div className="phone-mockup">
+              <div className="phone-screen">
+                <div className="app-interface">
+                  <div className="app-header">
+                    <div className="app-title">GPS Tracker PRO</div>
+                    <div className="app-status">
+                      <span className="status-dot"></span>
+                      <span>Active</span>
+                    </div>
+                  </div>
+                  
+                  <div className="map-view">
+                    <div className="location-marker">
+                      <div className="pulse-effect"></div>
+                      <div className="marker-center">📍</div>
+                    </div>
+                    <div className="current-location">
+                      <div className="coord">44.7866° N</div>
+                      <div className="coord">20.4489° E</div>
+                    </div>
+                  </div>
+                  
+                  <div className="app-footer">
+                    <div className="gps-info">
+                      <div className="signal-strength">
+                        <span>📶</span>
+                        <span>Excellent</span>
+                      </div>
+                      <div className="battery-level">
+                        <span>🔋</span>
+                        <span>85%</span>
+                      </div>
+                    </div>
+                    <div className="tracking-stats">
+                      <div className="stat-item">
+                        <span>🛣️</span>
+                        <span>12.5 km</span>
+                      </div>
+                      <div className="stat-item">
+                        <span>⏱️</span>
+                        <span>45 min</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
+
       {/* Šta Nudi Sekcija */}
       <section id="uvod" className="features">
         <div className="container">
@@ -184,7 +185,7 @@ const Intro = () => {
 
       <footer className="footer">
         <div className="container">
-          <p>&copy; 2025 GPS Tracker PRO. Razvijeno kao školski projekat.</p>
+          <p>&copy; 2024 GPS Tracker PRO. Razvijeno kao školski projekat.</p>
         </div>
       </footer>
     </div>
