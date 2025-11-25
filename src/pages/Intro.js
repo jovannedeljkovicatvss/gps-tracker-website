@@ -102,7 +102,7 @@ const Intro = () => {
 
       <footer className="footer">
         <div className="container">
-          <p>&copy; 2024 GPS Tracker PRO. Razvijeno kao školski projekat.</p>
+          <p>&copy; 2025 GPS Tracker PRO. Razvijeno kao školski projekat.</p>
         </div>
       </footer>
     </div>
