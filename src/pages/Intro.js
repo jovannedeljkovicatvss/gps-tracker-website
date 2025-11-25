@@ -4,20 +4,7 @@ import './Intro.css';
 const Intro = () => {
   return (
     <div className="intro">
-      <header className="header">
-        <div className="container">
-          <div className="logo">
-            <h1>📍 GPS Tracker PRO</h1>
-          </div>
-          <nav className="nav">
-            <a href="#uvod">Uvod</a>
-            <a href="#istorija">Istorija</a>
-            <a href="#detalji">Detalji</a>
-            <a href="#cene">Cene</a>
-            <a href="#kontakt">Kontakt</a>
-          </nav>
-        </div>
-      </header>
+      
 
       {/* Hero Sekcija */}
       <section className="hero">
@@ -197,7 +184,7 @@ const Intro = () => {
 
       <footer className="footer">
         <div className="container">
-          <p>&copy; 2024 GPS Tracker PRO. Razvijeno kao školski projekat.</p>
+          <p>&copy; 2025 GPS Tracker PRO. Razvijeno kao školski projekat.</p>
         </div>
       </footer>
     </div>
