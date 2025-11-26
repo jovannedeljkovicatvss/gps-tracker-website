@@ -36,14 +36,21 @@ const Intro = () => {
             </div>
 
             <div className="hero-buttons">
-              <button className="btn btn-primary">
-                <span className="btn-icon">📱</span>
-                Preuzmi Aplikaciju
-              </button>
-              <button className="btn btn-secondary">
-                <span className="btn-icon">🎬</span>
-                Pogledaj Demo
-              </button>
+              <div className="button-container">
+  <a 
+    href="https://github.com/jovannedeljkovicatvss/gps-tracker-website/releases/download/GPS_Tracker_PRO_v1/GPS.Tracker.PRO.apk"
+    className="btn btn-primary"
+    download="GPS.Tracker.PRO.apk"
+  >
+    <span className="btn-icon">📱</span>
+    Preuzmi Aplikaciju
+  </a>
+  
+  <button className="btn btn-secondary">
+    <span className="btn-icon">🎬</span>
+    Pogledaj Demo
+  </button>
+</div>
             </div>
 
             <div className="hero-stats">
