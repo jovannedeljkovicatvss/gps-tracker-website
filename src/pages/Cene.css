@@ -1,0 +1,490 @@
+/* Dark Mode Preference */
+@media (prefers-color-scheme: dark) {
+  .eco-friendly {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(5, 150, 105, 0.25));
+    border-color: rgba(16, 185, 129, 0.4);
+  }
+  
+  .eco-stat {
+    background: rgba(30, 41, 59, 0.9);
+  }
+  
+  .eco-stat .stat-number {
+    color: #34d399;
+  }
+  
+  .eco-stat .stat-label {
+    color: #a7f3d0;
+  }
+}
+
+.cene {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.cene::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%);
+}
+
+.cene-header {
+  text-align: center;
+  margin-bottom: 60px;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.cene-header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.cene-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Planovi - ISPRAVLJENO za iste veličine */
+.planovi-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 kolone umesto auto-fit */
+  gap: 30px;
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.plan-kartica {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 680px; /* Fiksna visina za obe kartice */
+}
+
+.plan-kartica:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+.plan-kartica.popularan {
+  border: 3px solid #764ba2;
+  transform: scale(1.02); /* Manje scale da se uklopi */
+}
+
+.popularan-badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #764ba2;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  z-index: 2;
+}
+
+.plan-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.plan-header h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.plan-cena {
+  margin-bottom: 10px;
+}
+
+.cena {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #764ba2;
+}
+
+.period {
+  font-size: 1rem;
+  color: #666;
+}
+
+.plan-opis {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.karakteristike-lista {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+  flex-grow: 1; /* Ovo će da ispuni preostali prostor */
+}
+
+.karakteristike-lista li {
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+  color: #333;
+  font-size: 1rem;
+}
+
+.karakteristike-lista li.onemoguceno {
+  color: #999;
+  text-decoration: line-through;
+}
+
+.plan-dugme {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: auto; /* Gura dugme na dno */
+}
+
+.plan-dugme:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.plan-dugme.basic {
+  background: #667eea;
+}
+
+.plan-dugme.premium {
+  background: #764ba2;
+}
+
+/* Premium Showcase - ISPRAVLJENO za 2x2 grid */
+.premium-showcase {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.premium-showcase h2 {
+  color: #333;
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.premium-showcase h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 2px;
+}
+
+/* DVA REDA × DVE KOLONE za premium feature polja */
+.premium-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 kolone */
+  grid-template-rows: repeat(2, 1fr);    /* 2 reda */
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.premium-kartica {
+  padding: 30px 25px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  min-height: 220px; /* Fiksna visina za sve kartice */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 4px solid #764ba2;
+}
+
+.premium-kartica:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.premium-ikonica {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.premium-kartica h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.premium-kartica p {
+  color: #666;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* FAQ Section */
+.faq-section {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.faq-section h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.faq-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 2px;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.faq-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.faq-item h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.faq-item p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+  .planovi-grid {
+    grid-template-columns: 1fr; /* 1 kolona na tablet */
+    max-width: 500px;
+    margin: 0 auto 80px;
+  }
+  
+  .plan-kartica {
+    min-height: 650px;
+  }
+  
+  .premium-grid {
+    grid-template-columns: repeat(2, 1fr); /* I dalje 2x2 na tablet */
+    gap: 20px;
+    max-width: 700px;
+  }
+  
+  .premium-kartica {
+    min-height: 200px;
+    padding: 25px 20px;
+  }
+}
+
+/* Mobile (768px) */
+@media (max-width: 768px) {
+  .cene {
+    padding: 80px 0;
+  }
+  
+  .cene-header h1 {
+    font-size: 2rem;
+  }
+  
+  .cene-header p {
+    font-size: 1.1rem;
+  }
+  
+  .planovi-grid {
+    max-width: 100%;
+  }
+  
+  .plan-kartica {
+    padding: 30px 25px;
+    min-height: 620px;
+  }
+  
+  .plan-kartica.popularan {
+    transform: none; /* Ukloni scale na mobilnim */
+  }
+  
+  .plan-header h3 {
+    font-size: 1.6rem;
+  }
+  
+  .cena {
+    font-size: 2.5rem;
+  }
+  
+  /* Premium grid: 1 kolona na mobilnim */
+  .premium-grid {
+    grid-template-columns: 1fr; /* 1 kolona na mobilnim */
+    grid-template-rows: repeat(4, auto); /* 4 reda */
+    gap: 20px;
+    max-width: 400px;
+  }
+  
+  .premium-kartica {
+    min-height: 180px;
+    padding: 25px 20px;
+  }
+  
+  .premium-showcase,
+  .faq-section {
+    padding: 30px 25px;
+  }
+  
+  .premium-showcase h2,
+  .faq-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+}
+
+/* Small Mobile (< 576px) */
+@media (max-width: 576px) {
+  .cene-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .plan-kartica {
+    min-height: 600px;
+    padding: 25px 20px;
+  }
+  
+  .plan-header h3 {
+    font-size: 1.5rem;
+  }
+  
+  .cena {
+    font-size: 2.2rem;
+  }
+  
+  .karakteristike-lista li {
+    font-size: 0.9rem;
+    padding: 10px 0;
+  }
+  
+  .premium-grid {
+    gap: 15px;
+    max-width: 350px;
+  }
+  
+  .premium-kartica {
+    min-height: 170px;
+    padding: 20px 15px;
+  }
+  
+  .premium-kartica h3 {
+    font-size: 1.2rem;
+  }
+  
+  .premium-kartica p {
+    font-size: 0.9rem;
+  }
+  
+  .faq-item h3 {
+    font-size: 1.2rem;
+  }
+  
+  .faq-item p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Landscape mode na mobilnim */
+@media (max-width: 768px) and (orientation: landscape) {
+  .planovi-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolone u landscape */
+    max-width: 100%;
+  }
+  
+  .plan-kartica {
+    min-height: 700px; /* Više u landscape */
+  }
+  
+  .premium-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2x2 u landscape */
+    gap: 15px;
+  }
+}
+/* Reduce motion for accessibility and energy savings */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .eco-icon {
+    animation: none !important;
+  }
+}

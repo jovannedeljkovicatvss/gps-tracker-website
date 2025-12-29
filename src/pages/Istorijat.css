@@ -1,0 +1,488 @@
+/* Dark Mode Preference */
+@media (prefers-color-scheme: dark) {
+  .eco-friendly {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(5, 150, 105, 0.25));
+    border-color: rgba(16, 185, 129, 0.4);
+  }
+  
+  .eco-stat {
+    background: rgba(30, 41, 59, 0.9);
+  }
+  
+  .eco-stat .stat-number {
+    color: #34d399;
+  }
+  
+  .eco-stat .stat-label {
+    color: #a7f3d0;
+  }
+}
+
+.istorijat * {
+  box-sizing: border-box;
+}
+
+.istorijat {
+  padding: 100px 0 50px;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+.istorijat h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #1f2937;
+}
+
+/* Timeline */
+.timeline {
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #2563eb;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.timeline-date {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+  color: #2563eb;
+  font-size: 1.1rem;
+}
+
+.timeline-content {
+  flex: 1;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin: 0 2rem;
+  position: relative;
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background: #2563eb;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+  right: -30px;
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+  left: -30px;
+}
+
+/* Motivacija */
+.motivacija {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.motivacija h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #1f2937;
+  font-size: 2.2rem;
+  position: relative;
+}
+
+.motivacija h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #2563eb, #60a5fa);
+  border-radius: 2px;
+}
+
+.motivacija-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.motivacija-card {
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 4px solid #2563eb;
+}
+
+.motivacija-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.motivacija-card h3 {
+  color: #2563eb;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.motivacija-card p {
+  color: #666;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+  .motivacija-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .motivacija-card {
+    min-height: 180px;
+    padding: 1.8rem 1.2rem;
+  }
+}
+
+/* Tablet (768px) */
+@media (max-width: 768px) {
+  .istorijat {
+    padding: 80px 0 30px;
+  }
+  
+  .istorijat h1 {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    padding: 0 1rem;
+  }
+  
+  /* Timeline za tablet */
+  .timeline {
+    max-width: 100%;
+    padding: 0 1rem;
+    position: relative;
+  }
+  
+  .timeline::before {
+    left: 50px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, #2563eb, #60a5fa);
+    transform: none;
+  }
+  
+  .timeline-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+    min-height: 120px;
+    position: relative;
+  }
+  
+  .timeline-item:nth-child(odd) {
+    flex-direction: row;
+  }
+  
+  .timeline-date {
+    flex: 0 0 120px;
+    text-align: right;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2563eb;
+    padding-right: 1.5rem;
+    margin-top: 0.5rem;
+    position: relative;
+    z-index: 2;
+    background: #f8fafc;
+    padding-left: 10px;
+  }
+  
+  .timeline-date::after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background: #2563eb;
+    border-radius: 50%;
+    border: 4px solid #f8fafc;
+    z-index: 3;
+  }
+  
+  .timeline-content {
+    flex: 1;
+    margin-left: 1.5rem;
+    margin-right: 0;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    position: relative;
+    border-left: 4px solid #2563eb;
+  }
+  
+  .timeline-content::before {
+    display: none;
+  }
+  
+  /* Motivacija za tablet */
+  .motivacija {
+    padding: 0 1rem;
+  }
+  
+  .motivacija h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .motivacija-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .motivacija-card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile (576px - 768px) */
+@media (max-width: 576px) {
+  .istorijat h1 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  .timeline::before {
+    left: 40px;
+  }
+  
+  .timeline-date {
+    flex: 0 0 100px;
+    font-size: 0.95rem;
+    padding-right: 1.2rem;
+  }
+  
+  .timeline-date::after {
+    width: 18px;
+    height: 18px;
+    right: -7px;
+  }
+  
+  .timeline-content {
+    margin-left: 1.2rem;
+    padding: 1.2rem;
+  }
+  
+  .timeline-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .timeline-content p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  /* Motivacija za mobile - 1 kolona */
+  .motivacija-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .motivacija-card {
+    padding: 1.5rem;
+    min-height: 160px;
+  }
+  
+  .motivacija-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .motivacija-card p {
+    font-size: 0.9rem;
+  }
+  
+  .motivacija h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Small Mobile (< 400px) */
+@media (max-width: 400px) {
+  .istorijat {
+    padding: 70px 0 20px;
+  }
+  
+  .istorijat h1 {
+    font-size: 1.6rem;
+  }
+  
+  .timeline::before {
+    left: 35px;
+  }
+  
+  .timeline-date {
+    flex: 0 0 85px;
+    font-size: 0.9rem;
+    padding-right: 1rem;
+  }
+  
+  .timeline-date::after {
+    width: 16px;
+    height: 16px;
+    right: -6px;
+    border-width: 3px;
+  }
+  
+  .timeline-content {
+    margin-left: 1rem;
+    padding: 1rem;
+    border-left-width: 3px;
+  }
+  
+  .timeline-content h3 {
+    font-size: 1rem;
+  }
+  
+  .timeline-content p {
+    font-size: 0.85rem;
+  }
+  
+  .motivacija-grid {
+    gap: 1rem;
+    max-width: 350px;
+  }
+  
+  .motivacija-card {
+    padding: 1.2rem;
+    min-height: 150px;
+  }
+  
+  .motivacija-card h3 {
+    font-size: 1rem;
+  }
+  
+  .motivacija-card p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Landscape mode na mobilnim */
+@media (max-width: 768px) and (orientation: landscape) {
+  .timeline-date {
+    flex: 0 0 110px;
+  }
+  
+  .timeline-content {
+    margin-left: 1.8rem;
+  }
+  
+  .motivacija-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+/* Reduce motion for accessibility and energy savings */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .eco-icon {
+    animation: none !important;
+  }
+}
+/* Timeline hover efekti */
+.timeline-item:hover .timeline-date {
+  transform: scale(1.1);
+  color: #10b981;
+  text-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
+}
+
+.timeline-item:hover .timeline-content {
+  transform: translateX(5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-left-color: #10b981;
+}
+
+.timeline-date::after {
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-date::after {
+  transform: translateY(-50%) scale(1.2);
+  background: #10b981;
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+}
+
+/* Animacija za timeline item */
+.timeline-item {
+  transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: translateX(5px);
+}
+
+/* Responsive za hover efekte */
+@media (max-width: 768px) {
+  .timeline-item:hover {
+    transform: translateX(3px);
+  }
+  
+  .timeline-item:hover .timeline-content {
+    transform: translateX(2px);
+  }
+}

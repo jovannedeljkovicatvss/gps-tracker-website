@@ -1,0 +1,438 @@
+/* Dark Mode Preference */
+@media (prefers-color-scheme: dark) {
+  .eco-friendly {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(5, 150, 105, 0.25));
+    border-color: rgba(16, 185, 129, 0.4);
+  }
+  
+  .eco-stat {
+    background: rgba(30, 41, 59, 0.9);
+  }
+  
+  .eco-stat .stat-number {
+    color: #34d399;
+  }
+  
+  .eco-stat .stat-label {
+    color: #a7f3d0;
+  }
+}
+
+.kontakt {
+  padding: 100px 0 50px;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+.kontakt-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.kontakt-header h1 {
+  font-size: 2.5rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.kontakt-header p {
+  font-size: 1.2rem;
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.kontakt-content {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Kontakt Info */
+.kontakt-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info-card, .stats-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.info-card h2, .stats-card h3 {
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.info-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.info-icon {
+  font-size: 1.5rem;
+  margin-top: 0.2rem;
+}
+
+.info-details h3 {
+  color: #2563eb;
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
+
+.info-details p {
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Stats */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.stat {
+  text-align: center;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 12px;
+}
+
+.stat-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2563eb;
+  margin-bottom: 0.3rem;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* Kontakt Forma */
+.kontakt-forma {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  padding: 2rem;
+}
+
+.form-card h2 {
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+}
+
+/* Dugme */
+.btn {
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: white;
+  width: 100%;
+  justify-content: center;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.btn-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-primary.submitting {
+  background: #9ca3af;
+}
+
+.btn-secondary {
+  background: #f1f5f9;
+  color: #374151;
+  border: 2px solid #e5e7eb;
+}
+
+.btn-secondary:hover {
+  background: #e5e7eb;
+}
+
+/* Loading spinner */
+.loading-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Success Message */
+.success-message {
+  text-align: center;
+  padding: 2rem;
+}
+
+.success-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.success-message h3 {
+  color: #059669;
+  margin-bottom: 1rem;
+}
+
+.success-message p {
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablet (1024px) */
+@media (max-width: 1024px) {
+  .kontakt-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .kontakt-info {
+    order: 2;
+  }
+  
+  .kontakt-forma {
+    order: 1;
+  }
+}
+
+/* Mobile (768px) */
+@media (max-width: 768px) {
+  .kontakt {
+    padding: 80px 0 30px;
+  }
+  
+  .kontakt-header h1 {
+    font-size: 2rem;
+  }
+  
+  .info-card, .stats-card, .kontakt-forma {
+    padding: 1.5rem;
+  }
+  
+  /* ISPRAVLJENO: Info-item ostaje isti layout kao na desktopu */
+  .info-item {
+    display: flex; /* Ostaje flex (ne menja se u column) */
+    align-items: flex-start; /* Isti kao desktop */
+    gap: 1rem; /* Isti razmak */
+    text-align: left; /* Levo poravnanje (ne center) */
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  
+  .info-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  
+  .info-icon {
+    font-size: 1.5rem; /* Ista veličina */
+    margin-top: 0.2rem;
+    flex-shrink: 0; /* Sprečava smanjivanje */
+  }
+  
+  .info-details h3 {
+    color: #2563eb;
+    margin-bottom: 0.3rem;
+    font-size: 1rem; /* Ista veličina */
+  }
+  
+  .info-details p {
+    color: #6b7280;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 0.95rem; /* Malo manji font za mobile ali ne previše */
+  }
+  
+  /* Stats grid ostaje horizontalan na mobilnim */
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 kolone i na mobilnim */
+    gap: 1rem;
+  }
+  
+  .stat {
+    padding: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 1.3rem;
+  }
+  
+  .stat-label {
+    font-size: 0.8rem;
+  }
+}
+
+/* Small Mobile (< 576px) */
+@media (max-width: 576px) {
+  .kontakt-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .kontakt-header p {
+    font-size: 1rem;
+  }
+  
+  .info-card, .stats-card, .kontakt-forma {
+    padding: 1.2rem;
+  }
+  
+  .info-item {
+    gap: 0.8rem; /* Malo manji razmak */
+  }
+  
+  .info-icon {
+    font-size: 1.3rem;
+  }
+  
+  /* Stats grid - 3 kolone i na malim mobilnim */
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+  }
+  
+  .stat {
+    padding: 0.8rem 0.5rem;
+  }
+  
+  .stat-number {
+    font-size: 1.2rem;
+  }
+  
+  .stat-label {
+    font-size: 0.75rem;
+  }
+  
+  /* Form inputs */
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Very Small Mobile (< 400px) */
+@media (max-width: 400px) {
+  /* Ako baš mora da bude jedna kolona za stats */
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr); /* I dalje 3 kolone */
+    gap: 0.5rem;
+  }
+  
+  .stat {
+    padding: 0.6rem 0.3rem;
+  }
+  
+  .stat-number {
+    font-size: 1.1rem;
+  }
+  
+  .stat-label {
+    font-size: 0.7rem;
+  }
+  
+  .info-item {
+    flex-direction: row; /* Uvek horizontalno */
+    gap: 0.6rem;
+  }
+}
+/* Reduce motion for accessibility and energy savings */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .eco-icon {
+    animation: none !important;
+  }
+}
