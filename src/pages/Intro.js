@@ -7,6 +7,7 @@ const Intro = () => {
   const [userRating, ratingRef] = useCounter(4.8);
   const [downloads, downloadsRef] = useCounter(500);
   const [reliability, reliabilityRef] = useCounter(99);
+  
   return (
     <div className="intro">
       {/* Hero Sekcija */}
@@ -76,9 +77,10 @@ const Intro = () => {
                 <div className="stat-label">Pouzdanost</div>
               </div>
 
+              {/* OVO JE ISPRAVLJEN DEO - SA DIRECT DOWNLOAD LINKOM */}
               <div className="stat">
                 <a 
-                  href="https://drive.google.com/file/d/1yf0orbbJh-fiS_VO3srNf0H5X_RsOhOb/view?usp=sharing"
+                  href="https://drive.google.com/uc?export=download&id=1yf0orbbJh-fiS_VO3srNf0H5X_RsOhOb"
                   className="btn-learn-more"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -212,7 +214,6 @@ const Intro = () => {
         <div className="container">
           <p>&copy; 2025 GPS Tracker PRO. Razvijeno kao školski projekat.</p>
           
-          {/* DODAJ OVO - Eco-friendly badge */}
           <div className="eco-friendly">
             <div className="eco-icon">🌱</div>
             <h3 className="eco-title">Eco-friendly Website</h3>
