@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Detalji.css';
 
 const Detalji = () => {
+  
   const features = [
     {
       category: "📍 Osnovno Praćenje",

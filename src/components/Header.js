@@ -2,8 +2,11 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 import { NavLink } from 'react-router-dom';
+import { useTheme } from '../context/ThemeContext';
 
 const Header = () => {
+   const { isDark, toggleTheme } = useTheme();
+
   const location = useLocation();
 
   return (
@@ -37,6 +40,10 @@ const Header = () => {
   Kontakt
 </NavLink>
         </nav>
+        {/* Theme Toggle Dugme */}
+        <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
+          {isDark ? '☀️' : '🌙'}
+        </button>
       </div>
     </header>
   );

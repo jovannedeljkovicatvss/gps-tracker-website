@@ -69,6 +69,10 @@ const Istorijat = () => {
               <h3>🚀 Praktična Primena</h3>
               <p>Aplikacija koja rešava stvarne probleme korisnika</p>
             </div>
+            <div className="motivacija-card">
+              <h3>🔒 Privatnost Podataka</h3>
+              <p>Svi podaci ostaju na uređaju bez slanja na server</p>
+            </div>
           </div>
         </div>
       </div>
