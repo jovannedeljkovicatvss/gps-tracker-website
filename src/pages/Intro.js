@@ -80,7 +80,7 @@ const Intro = () => {
               {/* OVO JE ISPRAVLJEN DEO - SA DIRECT DOWNLOAD LINKOM */}
               <div className="stat">
                 <a 
-                  href="https://drive.google.com/uc?export=download&id=1yf0orbbJh-fiS_VO3srNf0H5X_RsOhOb"
+                  href={`https://drive.google.com/uc?export=download&id=1yf0orbbJh-fiS_VO3srNf0H5X_RsOhOb&t=${Date.now()}`}
                   className="btn-learn-more"
                   target="_blank"
                   rel="noopener noreferrer"
