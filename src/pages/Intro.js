@@ -39,55 +39,54 @@ const Intro = () => {
             </div>
 
             <div className="hero-buttons">
-  <a 
-    href="https://github.com/jovannedeljkovicatvss/gps-tracker-website/releases/download/GPS_Tracker_PRO_v1/GPS.Tracker.PRO.apk" 
-    className="btn btn-primary"
-    target="_blank" 
-    rel="noopener noreferrer"
-    download="GPS_Tracker_PRO.apk"
-  >
-    <span className="btn-icon">📱</span>
-    Preuzmi Aplikaciju
-  </a>
-  <a 
-    href="https://www.youtube.com" 
-    className="btn btn-secondary"
-    target="_blank" 
-    rel="noopener noreferrer"
-  >
-    <span className="btn-icon">🎬</span>
-    Pogledaj Demo
-  </a>
-</div>
+              <a 
+                href="https://github.com/jovannedeljkovicatvss/gps-tracker-website/releases/download/GPS_Tracker_PRO_v1/GPS.Tracker.PRO.apk" 
+                className="btn btn-primary"
+                target="_blank" 
+                rel="noopener noreferrer"
+                download="GPS_Tracker_PRO.apk"
+              >
+                <span className="btn-icon">📱</span>
+                Preuzmi Aplikaciju
+              </a>
+              <a 
+                href="https://www.youtube.com" 
+                className="btn btn-secondary"
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <span className="btn-icon">🎬</span>
+                Pogledaj Demo
+              </a>
+            </div>
+            
             <div className="hero-stats">
-        <div className="stat" ref={ratingRef}>
-          <div className="stat-number">{userRating.toFixed(1)}/5</div>
-          <div className="stat-label">Ocena korisnika</div>
-        </div>
-        
-        <div className="stat" ref={downloadsRef}>
-          <div className="stat-number">{downloads}+</div>
-          <div className="stat-label">Preuzimanja</div>
-        </div>
-        
-        <div className="stat" ref={reliabilityRef}>
-          <div className="stat-number">{reliability}%</div>
-          <div className="stat-label">Pouzdanost</div>
-        </div>
+              <div className="stat" ref={ratingRef}>
+                <div className="stat-number">{userRating.toFixed(1)}/5</div>
+                <div className="stat-label">Ocena korisnika</div>
+              </div>
+              
+              <div className="stat" ref={downloadsRef}>
+                <div className="stat-number">{downloads}+</div>
+                <div className="stat-label">Preuzimanja</div>
+              </div>
+              
+              <div className="stat" ref={reliabilityRef}>
+                <div className="stat-number">{reliability}%</div>
+                <div className="stat-label">Pouzdanost</div>
+              </div>
 
               <div className="stat">
-  <div className="stat">
-  <a 
-    href="https://drive.google.com/file/d/1yf0orbbJh-fiS_VO3srNf0H5X_RsOhOb/view?usp=sharing"
-    className="btn-learn-more"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <span className="btn-icon">📖</span>
-    Saznaj više
-  </a>
-</div>
-</div>
+                <a 
+                  href="https://drive.google.com/file/d/1yf0orbbJh-fiS_VO3srNf0H5X_RsOhOb/view?usp=sharing"
+                  className="btn-learn-more"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="btn-icon">📖</span>
+                  Saznaj više
+                </a>
+              </div>
             </div>
           </div>
           
@@ -210,34 +209,34 @@ const Intro = () => {
       </section>
 
       <footer className="footer">
-  <div className="container">
-    <p>&copy; 2025 GPS Tracker PRO. Razvijeno kao školski projekat.</p>
-    
-    {/* DODAJ OVO - Eco-friendly badge */}
-    <div className="eco-friendly">
-      <div className="eco-icon">🌱</div>
-      <h3 className="eco-title">Eco-friendly Website</h3>
-      <p className="eco-desc">
-        Ovaj sajt je optimizovan za minimalnu potrošnju energije. 
-        Koristi sistem fontove, optimizovane slike i efikasne animacije.
-      </p>
-      <div className="eco-stats">
-        <div className="eco-stat">
-          <span className="stat-number">~40%</span>
-          <span className="stat-label">manje energije</span>
+        <div className="container">
+          <p>&copy; 2025 GPS Tracker PRO. Razvijeno kao školski projekat.</p>
+          
+          {/* DODAJ OVO - Eco-friendly badge */}
+          <div className="eco-friendly">
+            <div className="eco-icon">🌱</div>
+            <h3 className="eco-title">Eco-friendly Website</h3>
+            <p className="eco-desc">
+              Ovaj sajt je optimizovan za minimalnu potrošnju energije. 
+              Koristi sistem fontove, optimizovane slike i efikasne animacije.
+            </p>
+            <div className="eco-stats">
+              <div className="eco-stat">
+                <span className="stat-number">~40%</span>
+                <span className="stat-label">manje energije</span>
+              </div>
+              <div className="eco-stat">
+                <span className="stat-number">0.2g</span>
+                <span className="stat-label">CO2 po stranici</span>
+              </div>
+              <div className="eco-stat">
+                <span className="stat-number">100%</span>
+                <span className="stat-label">sistem fontovi</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="eco-stat">
-          <span className="stat-number">0.2g</span>
-          <span className="stat-label">CO2 po stranici</span>
-        </div>
-        <div className="eco-stat">
-          <span className="stat-number">100%</span>
-          <span className="stat-label">sistem fontovi</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
+      </footer>
     </div>
   );
 };
